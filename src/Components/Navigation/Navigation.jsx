@@ -1,19 +1,28 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "./navigation.css";
+import "../styling/navigation.css"; // adjust based on actual location
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import { RiArrowDropDownFill } from "react-icons/ri";
 import logo from "../../assets/myLogoWhite.png";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in ms
+      once: true, // Whether animation should happen only once while scrolling down
+    });
+  }, []);
   return (
     <>
       <nav>
-        <div className="nav-area">
+        <div className="nav-area" >
           <div className="brand-logo">
             <img src={logo} alt="Logo" />
           </div>
-          <div className="nav-container">
+          <div className="nav-container" data-aos="zoom-in-up">
             <div className="nav-hover">
               {" "}
               <NavLink to="/">Home</NavLink>
@@ -38,7 +47,7 @@ const Navigation = () => {
                 className="navdropbtn"
                 onClick={() => setIsOpen((prev) => !prev)}
               >
-                Account <RiArrowDropDownFill/>
+                Account <RiArrowDropDownFill />
               </button>
               {isOpen && (
                 <div className="nav-dropdown-content">

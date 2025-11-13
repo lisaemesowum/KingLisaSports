@@ -1,0 +1,31 @@
+.HOME-UPcoming {
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  height: 420px;
+  justify-content: end;
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+.home-secondary-info {
+  /* background-color: aqua; */
+  font-weight: 300;
+  color: white;
+  font-size: 20px;
+}
+.home-title {
+  font-weight: 700;
+  font-size: 19px;
+  color: white;
+  margin-bottom: 25px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
